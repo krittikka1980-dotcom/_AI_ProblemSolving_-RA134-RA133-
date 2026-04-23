@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Navigation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Smart Navigation System</h1>
+
+<div class="container">
+
+    <!-- INPUT -->
+    <div class="card">
+        <h2>Graph Configuration</h2>
+
+        <textarea id="graphInput" placeholder="Example: A-B, A-C, B-D, C-D"></textarea>
+
+        <div class="inputs">
+            <input type="text" id="start" placeholder="Start Node">
+            <input type="text" id="goal" placeholder="Goal Node">
+        </div>
+
+        <button onclick="run()">Find Paths</button>
+    </div>
+
+    <!-- OUTPUT -->
+    <div class="card output">
+        <h2>Results</h2>
+
+        <div class="box">
+            <h3>BFS Path</h3>
+            <p id="bfsPath">-</p>
+        </div>
+
+        <div class="box">
+            <h3>DFS Path</h3>
+            <p id="dfsPath">-</p>
+        </div>
+
+        <div class="box stats">
+            <h3>Performance</h3>
+            <p id="bfsStats"></p>
+            <p id="dfsStats"></p>
+        </div>
+    </div>
+
+</div>
+
+<!-- ✅ GRAPH -->
+<canvas id="graphCanvas" width="700" height="400"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
